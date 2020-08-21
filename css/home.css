@@ -1,0 +1,27 @@
+.middle-body {
+    height: 600px;
+}
+.top-heading {
+    padding: 200px 0 0px 80px;
+}
+.top-heading>.heading>h1 {
+   font-size: 50px;
+   font-weight: 800;
+}
+.top-heading>.heading>h1>span{
+    color: orange;
+}
+
+.top-heading>.content_p>h5 {
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.top-heading>.content_p>h5>span {
+    color: orange;
+    font-weight: 800;
+}
+.image_h>img {
+    margin: 100px 0px 0 0;
+    width: inherit;
+}
