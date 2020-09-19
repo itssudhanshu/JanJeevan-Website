@@ -3,22 +3,41 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/doctor.css">
     <title>JanJeevan</title>
+    
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET",'../xml/patient.xml');
+            xmlhttp.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = '<thead class="table-primary"><tr><th>Doctor Name</th><th>Specialisation</th></tr></thead>';
+            var x = xmlDoc.getElementsByTagName("CD");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
 
 </head>
 
@@ -62,22 +81,12 @@
             </nav>
         </div>
     </header>
-    <section class="doctorform">
-        <div>
-            <form action="https://www.google.com/">
-                <div class="container">
-                    <label>Username : </label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-                    <label>Password : </label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-                    <a href="https://www.google.com/"><button type="submit">Login</button></a>
-                    <a href="html/signup.html"><button type="button"> SignUp</button> </a>
-                    Forgot <a href="html/forgot.html"> password? </a>
-                </div>
-            </form>
-        </div>
+    <section class="doctorform container">
+        <button class="btn btn-primary btn-block" type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+        <br><br>
+        <table class="table table-hover table-bordered" id="demo"></table>
     </section>
-    <footer class="container-fluid">
+    <!-- <footer class="container-fluid">
         <div class="row">
             <div class="col-md-6">
                 <p class="tnc" style="text-align: center !important;">
@@ -92,7 +101,7 @@
                 </p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 </body>
 
