@@ -9,7 +9,7 @@
    font-weight: 800;
 }
 .top-heading>.heading>h1>span{
-    color:blue;
+    color: rgb(39, 39, 99);
 }
 
 .top-heading>.content_p>h5 {
@@ -18,7 +18,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .top-heading>.content_p>h5>span {
-    color: orange;
+    color: rgb(39, 39, 99);
     font-weight: 800;
 }
 .image_h>img {
