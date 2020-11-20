@@ -16,7 +16,12 @@
     </script>
     <link rel="stylesheet" href="../css/index.css">
     <title>JanJeevan</title>
-
+<style>
+    .btnsubmit{
+        color: white;
+        background-color:  rgb(84, 84, 180);
+    }
+</style>
 </head>
 
 <body>
@@ -36,17 +41,18 @@
                             <button type="button" class="btn"><a class="nav-link" href="home.html">Home</a></button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn"><a class="nav-link" href="#">Our
-                                    Branches</a></button>
+                            <button type="button" class="btn"><a class="nav-link" href="doctor.html">Our_Doctors</a></button>
                         </li>
                         <li class="nav-item dropdown" id="itemhide">
                             <button class="btn"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
+                                    Our_Patient
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="doctor.html">Our_Doctors</a>
-                                    <a class="dropdown-item" href="patient.html">Our_Patient</a>
+                                    <!-- <a class="dropdown-item" href="doctor.html">Our_Doctors</a> -->
+                                    <a class="dropdown-item" href="patient.html">ADD_Patient</a>
+                                    <a class="dropdown-item" href="../php/viewpatient.php">View_Patient</a>
+
                                 </div>
                             </button>
                         </li>
@@ -60,9 +66,112 @@
         </div>
     </header>
     <div>
+        <center> 
+                   <form id="data" method="post" action="../php/addpatient.php">
+            <table>
+             <tr>
+              <td>Patient Name :</td>
+              <td><input type="text" name="pname"></td>
+             </tr>
+              <tr>
+              <td>Gender :</td>
+              <td>
+               <input type="radio" name="gender" value="male">Male
+               <input type="radio" name="gender" value="female">Female
+              </td>
+             </tr>
+            <tr>
+              <td>Address :</td>
+              <td><input type="text" name="address"></td>
+             </tr>
+             <tr>
+              <td>Email :</td>
+              <td><input type="email" name="email"></td>
+             </tr>
+          <tr>
+              <td>Phone Number :</td>
+              <td><input type="number" name="pnumber"></td>
+             </tr>
+          <tr>
+              <td>Date Of Birth :</td>
+             <td><input type="date"  name="dob" placeholder="Date"></td>
+               </tr>
+               <tr>
+                  <td>Blood Group : </td>>
+                  <td> 
+                     <input type="radio" name="bgrp" value="a+">A+
+                     <input type="radio" name="bgrp" value="a-">A-
+                     <input type="radio" name="bgrp" value="b+">B+
+                     <input type="radio" name="bgrp" value="b-">B-
+                     <input type="radio" name="bgrp" value="o+">O+
+                     <input type="radio" name="bgrp" value="o-">O-
+                     <input type="radio" name="bgrp" value="ab+">AB+
+                     <input type="radio" name="bgrp" value="ab-">AB-
+                   </td>
+                </tr>
+              <tr>
+              <td>Emergency Contact Name:</td>
+              <td><input type="text" name="ename"></td>
+             </tr>
+          <tr>
+              <td>Relationship :</td>
+              <td><input type="text" name="relationship"></td>
+             </tr>
+          <tr>
+              <td>Emergency Phone Number:</td>
+              <td><input type="text" name="enumber"></td>
+             </tr>
+          <tr>
+              <td>Reason For Registration :</td>
+              <td><input type="text" name="reason"></td>
+             </tr>
+          <tr>
+              <td>Additional Information :</td>
+              <td><input type="text" name="addinfo"></td>
+             </tr>
+          <tr>
+              <td>Doctor Name :</td>
+              <td><input type="text" name="dname"></td>
+             </tr>
+          <tr>
+              <td>Taking Any Medications Currently :</td>
+              <td>
+               <input type="radio" name="yesno" value="yes">Yes
+               <input type="radio" name="yesno" value="no">No
+              </td>
+             </tr>
+          <tr>
+              <td>If Yes, Please List It Here :</td>
+              <td><input type="text" name="info"></td>
+             </tr>
+            </table>  
+      <br>
+      <center>
+         <div class="input">
+            <button  type="submit" class="btn btnsubmit" name="addbtn" autofocus >Add Patient</button>
+          </div>
+    </center>
+     </form>
+    </center>
 
     </div>
 
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="tnc" style="text-align: center !important;">
+                    © 2020 <a href="">Terms & Conditions - Privacy Policy</a>
+                </p>
+            </div>
+            <div class="col-md-6 quaffle">
+                <p class="teamline" style="text-align: center !important;">
+                    Developed by <a style="color: white;" href=""><span
+                            style="font-weight: bold;color:orange;">S-S-N</span></a>
+
+                </p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

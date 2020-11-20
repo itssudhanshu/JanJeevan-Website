@@ -106,3 +106,16 @@ footer>.row>.col-md-6>p {
     font-size: 18px;
     font-weight: 500;
 }
+
+input[type=submit] {
+    background-color: rgb(84, 84, 180);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(84, 84, 180);
+  }
+  
