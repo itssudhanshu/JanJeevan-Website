@@ -97,22 +97,6 @@
 
   </tr>
   
-  <footer class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="tnc" style="text-align: center !important;">
-                    © 2020 <a href="">Terms & Conditions - Privacy Policy</a>
-                </p>
-            </div>
-            <div class="col-md-6 quaffle">
-                <p class="teamline" style="text-align: center !important;">
-                    Developed by <a style="color: white;" href=""><span
-                            style="font-weight: bold;color:orange;">S-S-N</span></a>
-
-                </p>
-            </div>
-        </div>
-    </footer>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "patient");
 if ($conn-> connect_error) {
@@ -135,5 +119,22 @@ else {
 $conn-> close();	
 ?>
 </table>
+
+<footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="tnc" style="text-align: center !important;">
+                    © 2020 <a href="">Terms & Conditions - Privacy Policy</a>
+                </p>
+            </div>
+            <div class="col-md-6 quaffle">
+                <p class="teamline" style="text-align: center !important;">
+                    Developed by <a style="color: white;" href=""><span
+                            style="font-weight: bold;color:orange;">S-S-N</span></a>
+
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
