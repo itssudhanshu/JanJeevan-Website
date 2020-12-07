@@ -62,19 +62,17 @@
                                     <!-- <a class="dropdown-item" href="doctor.html">Our_Doctors</a> -->
                                     <a class="dropdown-item" href="../html/patient.html">ADD_Patient</a>
                                     <a class="dropdown-item" href="viewpatient.php">View_Patient</a>
-
                                 </div>
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn"><a class="nav-link" href="../html/contact.html">Contact
-                                    Us</a></button>
+                            <button type="button" class="btn"><a class="nav-link" href="../html/contact.html">Contact   Us</a></button>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-    </header>
+</header>
 <h1 align="center">PATIENT DETAILS</h1>
 <table>
   <tr>
@@ -102,7 +100,7 @@ $conn = mysqli_connect("localhost", "root", "", "patient");
 if ($conn-> connect_error) {
 	die("Connection failed:". $conn-> connect_error);
 }
-
+    
 $sql = "SELECT id, pname, gender, address, email, pnumber, dob, bgrp, ename, relationship, enumber, reason, addinfo, dname, yesno, info from addpatient";
 $result = $conn-> query($sql);
 
@@ -127,14 +125,14 @@ $conn-> close();
                     © 2020 <a href="">Terms & Conditions - Privacy Policy</a>
                 </p>
             </div>
+
             <div class="col-md-6 quaffle">
                 <p class="teamline" style="text-align: center !important;">
                     Developed by <a style="color: white;" href=""><span
                             style="font-weight: bold;color:orange;">S-S-N</span></a>
-
                 </p>
             </div>
         </div>
-    </footer>
+</footer>
 </body>
 </html> 
